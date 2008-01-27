@@ -48,12 +48,10 @@ use vars qw( %Lexicon );
 	'Display Snap Preview Anywhere&trade; for All Links (Default)' => 'Display Snap Preview Anywhere&trade; for All Links (Default)',
 	'Display Snap Preview Anywhere&trade; for Local Links' => 'Display Snap Preview Anywhere&trade; for Local Links',
 	'Display Snap Preview Anywhere&trade; Search Box Below the Thumbnail (Default)' => 'Display Snap Preview Anywhere&trade; Search Box Below the Thumbnail (Default)',
+      'Display only PreviewShots&trade; (similar to Snap Preview Anywhere&trade; behavior).' =>'Display only PreviewShots&trade; (similar to Snap Preview Anywhere&trade; behavior).',
 	'Add an Icon to Indicate Snap Preview Anywhere&trade; (Default)' => 'Add an Icon to Indicate Snap Preview Anywhere&trade; (Default)',
 	'Show Snap Preview Anywhere&trade; When Cursor is Over Both Link and Icon (Default)' => 'Show Snap Preview Anywhere&trade; When Cursor is Over Both Link and Icon (Default)',
 	'Show Snap Preview Anywhere&trade; Only When Cursor is Over the Icon' => 'Show Snap Preview Anywhere&trade; Only When Cursor is Over the Icon',
-	'All HTML elements will be checked for a class of <strong>snap_preview</strong> or <strong>snap_nopreview</strong>.  This is the slowest, but most flexible, option.' => 'All HTML elements will be checked for a class of <strong>snap_preview</strong> or <strong>snap_nopreview</strong>.  This is the slowest, but most flexible, option.',
-	'No HTML elements will be checked for a class of <strong>snap_preview</strong> or <strong>snap_nopreview</strong>.  This is the fastest option.' => 'No HTML elements will be checked for a class of <strong>snap_preview</strong> or <strong>snap_nopreview</strong>.  This is the fastest option.',
-	'Only &lt;div&gt; and &lt;span&gt; elements will be checked for a class of <strong>snap_preview</strong> or <strong>snap_nopreview</strong>. (Default)' => 'Only &lt;div&gt; and &lt;span&gt; elements will be checked for a class of <strong>snap_preview</strong> or <strong>snap_nopreview</strong>. (Default)',
 	'Display your custom logo (only select if you have uploaded to the Snap site)' => 'Display your custom logo (only select if you have uploaded to the Snap site)',
 	'Choose the theme for your Snap Preview Anywhere&trade; display by clicking the appropriate color below (Default is Silver):' => 'Choose the theme for your Snap Preview Anywhere&trade; display by clicking the appropriate color below (Default is Silver):',
 

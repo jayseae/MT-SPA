@@ -6,12 +6,10 @@
         document.getElementById('spa_alllinks').disabled = 0;
         document.getElementById('spa_locallinks').disabled = 0;
         document.getElementById('spa_searchbox').disabled = 0;
+        document.getElementById('spa_previewshots').disabled = 0;
         document.getElementById('spa_link_icon').disabled = 0;
         document.getElementById('spa_preview_trigger_both').disabled = 0;
         document.getElementById('spa_preview_trigger_icon').disabled = 0;
-        document.getElementById('spa_elements_all').disabled = 0;
-        document.getElementById('spa_elements_none').disabled = 0;
-        document.getElementById('spa_elements_default').disabled = 0;
         document.getElementById('spa_customlogo').disabled = 0;
         document.getElementById('spa_theme').disabled = 0;
       } else {
@@ -19,12 +17,10 @@
         document.getElementById('spa_alllinks').disabled = 1;
         document.getElementById('spa_locallinks').disabled = 1;
         document.getElementById('spa_searchbox').disabled = 1;
+        document.getElementById('spa_previewshots').disabled = 1;
         document.getElementById('spa_link_icon').disabled = 1;
         document.getElementById('spa_preview_trigger_both').disabled = 1;
         document.getElementById('spa_preview_trigger_icon').disabled = 1;
-        document.getElementById('spa_elements_all').disabled = 1;
-        document.getElementById('spa_elements_none').disabled = 1;
-        document.getElementById('spa_elements_default').disabled = 1;000000
         document.getElementById('spa_customlogo').disabled = 1;
         document.getElementById('spa_th_silver').disabled = 1;
         document.getElementById('spa_theme').disabled = 1;
@@ -58,33 +54,31 @@ a.swatch:hover { border-bottom: #f60 1px solid; border-left: #f60 1px solid; bor
     </p>
     <p>
       <br />
-      <MT_TRANS phrase="Enter Your Snap Preview Anywhere&trade; Key:"><br /><br />
+      <MT_TRANS phrase="Enter Your SnapShots&trade; Key:"><br /><br />
       <input id="spa_key" name="spa_key" maxlength="75" size="75" <TMPL_IF NAME=SPA_KEY>value="<TMPL_VAR NAME=SPA_KEY>"</TMPL_IF> />
     </p>
     <p>
       <br />
-      <input type="checkbox" name="spa_alllinks" id="spa_alllinks" value="1" <TMPL_IF NAME=SPA_ALLLINKS>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Display Snap Preview Anywhere&trade; for All Links (Default)"><br />
+      <input type="checkbox" name="spa_alllinks" id="spa_alllinks" value="1" <TMPL_IF NAME=SPA_ALLLINKS>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Display SnapShots&trade; for All Links (Default)"><br />
     </p>
     <p>
       <br />
-      <input type="checkbox" name="spa_locallinks" id="spa_locallinks" value="1" <TMPL_IF NAME=SPA_LOCALLINKS>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Display Snap Preview Anywhere&trade; for Local Links"><br />
+      <input type="checkbox" name="spa_locallinks" id="spa_locallinks" value="1" <TMPL_IF NAME=SPA_LOCALLINKS>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Display SnapShots&trade; for Local Links"><br />
     </p>
     <p>
       <br />
-      <input type="checkbox" name="spa_searchbox" id="spa_searchbox" value="1" <TMPL_IF NAME=SPA_SEARCHBOX>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Display Snap Preview Anywhere&trade; Search Box Below the Thumbnail (Default)"><br />
+      <input type="checkbox" name="spa_searchbox" id="spa_searchbox" value="1" <TMPL_IF NAME=SPA_SEARCHBOX>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Display SnapShots&trade; Search Box Below the Thumbnail (Default)"><br />
     </p>
     <p>
       <br />
-      <input type="checkbox" name="spa_link_icon" id="spa_link_icon" onclick="hide_and_seek(this.form)" value="1" <TMPL_IF NAME=SPA_LINK_ICON>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Add an Icon to Indicate Snap Preview Anywhere&trade; (Default)"><br />
-      <br />
-      <input type="radio" name="spa_preview_trigger" id="spa_preview_trigger_both" value="both" <TMPL_IF NAME=SPA_PREVIEW_TRIGGER_BOTH>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Show Snap Preview Anywhere&trade; When Cursor is Over Both Link and Icon (Default)"><br />
-      <input type="radio" name="spa_preview_trigger" id="spa_preview_trigger_icon" value="icon" <TMPL_IF NAME=SPA_PREVIEW_TRIGGER_ICON>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Show Snap Preview Anywhere&trade; Only When Cursor is Over the Icon">
+      <input type="checkbox" name="spa_previewshots" id="spa_previewshots" value="1" <TMPL_IF NAME=SPA_PREVIEWSHOTS>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Display only PreviewShots&trade; (similar to Snap Preview Anywhere&trade; behavior)."><br />
     </p>
     <p>
       <br />
-      <input type="radio" name="spa_elements" id="spa_elements_all" value="all" <TMPL_IF NAME=SPA_ELEMENTS_ALL>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="All HTML elements will be checked for a class of <strong>snap_preview</strong> or <strong>snap_nopreview</strong>.  This is the slowest, but most flexible, option."><br />
-      <input type="radio" name="spa_elements" id="spa_elements_none" value="none" <TMPL_IF NAME=SPA_ELEMENTS_NONE>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="No HTML elements will be checked for a class of <strong>snap_preview</strong> or <strong>snap_nopreview</strong>.  This is the fastest option."><br />
-      <input type="radio" name="spa_elements" id="spa_elements_default" value="default" <TMPL_IF NAME=SPA_ELEMENTS_DEFAULT>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Only &lt;div&gt; and &lt;span&gt; elements will be checked for a class of <strong>snap_preview</strong> or <strong>snap_nopreview</strong>. (Default)">
+      <input type="checkbox" name="spa_link_icon" id="spa_link_icon" onclick="hide_and_seek(this.form)" value="1" <TMPL_IF NAME=SPA_LINK_ICON>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Add an Icon to Indicate SnapShots&trade; (Default)"><br />
+      <br />
+      <input type="radio" name="spa_preview_trigger" id="spa_preview_trigger_both" value="both" <TMPL_IF NAME=SPA_PREVIEW_TRIGGER_BOTH>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Show SnapShots&trade; When Cursor is Over Both Link and Icon (Default)"><br />
+      <input type="radio" name="spa_preview_trigger" id="spa_preview_trigger_icon" value="icon" <TMPL_IF NAME=SPA_PREVIEW_TRIGGER_ICON>checked="checked"</TMPL_IF> /> <MT_TRANS phrase="Show SnapShots&trade; Only When Cursor is Over the Icon">
     </p>
     <p>
       <br />
@@ -93,7 +87,7 @@ a.swatch:hover { border-bottom: #f60 1px solid; border-left: #f60 1px solid; bor
     <div id="swatches">
       <p>
         <br />
-        <MT_TRANS phrase="Choose the theme for your Snap Preview Anywhere&trade; display by clicking the appropriate color below (Default is Silver):"><br />
+        <MT_TRANS phrase="Choose the theme for your SnapShots&trade; display by clicking the appropriate color below (Default is Silver):"><br />
       </p>
       <p class="swatch-div">
         <a id="spa_th_silver" class="swatch color1" onclick="return toggle_theme('silver');"><br /></a>

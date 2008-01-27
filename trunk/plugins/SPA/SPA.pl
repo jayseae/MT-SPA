@@ -14,13 +14,13 @@ use MT;
 my $SPA;
 my $about = {
   name => 'MT-SPA',
-  description => "<MT_TRANS phrase=\"Provide access to Snap Preview Anywhere&trade; via template tag.\">",
+  description => "<MT_TRANS phrase=\"Provide access to SnapShots&trade; via template tag.\">",
   author_name => 'Everitz Consulting',
   author_link => 'http://www.everitz.com/',
   plugin_link => 'http://www.everitz.com/sol/mt-spa/index.php',
   doc_link => 'http://www.everitz.com/sol/mt-spa/index.php#install',
   l10n_class => 'SPA::L10N',
-  version => '1.0.0',
+  version => '1.1.0',
   blog_config_template => 'settings_blog.tmpl',
   settings => new MT::PluginSettings([
     ['spa_enabled', { Default => 0 }],
@@ -28,9 +28,9 @@ my $about = {
     ['spa_alllinks', { Default => 1 }],
     ['spa_locallinks', { Default => 0 }],
     ['spa_searchbox', { Default => 1 }],
+    ['spa_previewshots', { Default => 0 }],
     ['spa_link_icon', { Default => 1 }],
     ['spa_preview_trigger', { Default => 'both' }],
-    ['spa_elements', { Default => 'default' }],
     ['spa_theme', { Default => 'silver' }],
     ['spa_customlogo', { Default => 0 }],
   ])
@@ -78,6 +78,11 @@ sub snap_preview_anywhere {
   $str .= '&amp;sb=';
   $str .= ($cfg) ? '1' : '0';
 
+  # preview shots
+  $cfg = $SPA->get_config_value('spa_previewshots', 'blog:'.$blog_id);
+  $str .= '&amp;po=';
+  $str .= ($cfg) ? '1' : '0';
+
   # theme
   $cfg = $SPA->get_config_value('spa_theme', 'blog:'.$blog_id);
   $str .= '&amp;th=';
@@ -105,17 +110,17 @@ sub snap_preview_anywhere {
     $str .= $lip;
   }
 
-  # elements
-  $cfg = $SPA->get_config_value('spa_elements', 'blog:'.$blog_id);
-  $str .= '&amp;es=all'  if ($cfg && $cfg eq 'all');
-  $str .= '&amp;es=none' if ($cfg && $cfg eq 'none');
+  # elements <- not used with SnapShots
+  # $cfg = $SPA->get_config_value('spa_elements', 'blog:'.$blog_id);
+  # $str .= '&amp;es=all'  if ($cfg && $cfg eq 'all');
+  # $str .= '&amp;es=none' if ($cfg && $cfg eq 'none');
   # $cfg eq 'default' not sent (it's the default)
 
   # url
   $str .= '&amp;domain='.$blog_url;
 
   return <<HTML;
-<script defer="defer" id="snap_preview_anywhere" type="text/javascript" src="http://spa.snap.com/snap_preview_anywhere.js?$str"></script>
+<script type="text/javascript" src="http://shots.snap.com/snap_shots.js?$str"></script>
 HTML
 }
 
