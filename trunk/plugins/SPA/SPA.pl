@@ -1,8 +1,17 @@
 # ===========================================================================
-# Copyright Everitz Consulting.  Not for redistribution.
+# A Movable Type plugin to provide access to SnapShots via template tag.
+# Copyright 2007 Everitz Consulting <everitz.com>.
 #
-# Based loosely on the Wordpress Snap Preview Anywhere plugin:
-# http://ajaydsouza.com/wordpress/plugins/snap-preview-anywhere/
+# This program is free software:  You may redistribute it and/or modify it
+# it under the terms of the Artistic License version 2 as published by the
+# Open Source Initiative.
+#
+# This program is distributed in the hope that it will be useful but does
+# NOT INCLUDE ANY WARRANTY; Without even the implied warranty of FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+# You should have received a copy of the Artistic License with this program.
+# If not, see <http://www.opensource.org/licenses/artistic-license-2.0.php>.
 # ===========================================================================
 package MT::Plugin::SPA;
 
@@ -16,11 +25,11 @@ my $about = {
   name => 'MT-SPA',
   description => "<MT_TRANS phrase=\"Provide access to SnapShots&trade; via template tag.\">",
   author_name => 'Everitz Consulting',
-  author_link => 'http://www.everitz.com/',
-  plugin_link => 'http://www.everitz.com/sol/mt-spa/index.php',
-  doc_link => 'http://www.everitz.com/sol/mt-spa/index.php#install',
+  author_link => 'http://everitz.com/',
+  plugin_link => 'http://everitz.com/mt/spa/index.php',
+  doc_link => 'http://everitz.com/mt/spa/index.php#install',
   l10n_class => 'SPA::L10N',
-  version => '1.1.0',
+  version => '1.1.1',
   blog_config_template => 'settings_blog.tmpl',
   settings => new MT::PluginSettings([
     ['spa_enabled', { Default => 0 }],
